@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout >
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FbActivity">
+    <RelativeLayout
+        android:id="@+id/relative"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="@color/blue1">
+
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_centerInParent="true"
+            android:src="@drawable/fb" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/logo"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:text="FaceBook"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:textSize="25sp" />
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="50dp"
+            android:src="@drawable/ic_baseline_info_24"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="10dp"
+            app:tint="@color/white"
+            android:onClick="showDialog"/>
+    </RelativeLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/sharechat_link"
+        android:padding="10dp"
+        app:boxStrokeColor="@color/blue1"
+        app:hintTextColor="@color/blue1"
+        android:layout_below="@id/relative">
+
+        <com.google.android.material.textfield.TextInputEditText
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Facebook Video Url"
+            android:id="@+id/fb_url"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <LinearLayout
+        android:id="@+id/btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp"
+        android:layout_below="@id/sharechat_link"
+        android:weightSum="2">
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_weight="1"
+            android:text="Download"
+            android:textColor="@color/white"
+            android:textSize="25dp"
+            android:backgroundTint="@color/blue1"
+            android:gravity="center"
+            android:textAllCaps="false"
+            android:layout_marginRight="8dp"
+            android:layout_marginLeft="8dp"
+            android:id="@+id/downloadBtn"/>
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_weight="1"
+            android:text="Paste"
+            android:textSize="25dp"
+            android:gravity="center"
+            android:backgroundTint="@color/blue1"
+            android:textColor="@color/white"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:textAllCaps="false"
+            android:id="@+id/paste"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/banner_container1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical"
+        android:layout_below="@id/btn"/>
+
+
+</RelativeLayout>
+</layout>

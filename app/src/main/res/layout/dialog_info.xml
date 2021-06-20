@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="400dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="5dp"
+    app:strokeWidth="2dp"
+    app:strokeColor="@color/yellow"
+    app:cardCornerRadius="5dp"
+    app:cardElevation="4dp"
+    android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+<TextView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="How to Use:"
+    android:textSize="25sp"
+    android:textColor="@color/black"
+    android:textStyle="bold"
+    android:gravity="center"/>
+    <TextView
+        android:id="@+id/info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="About"
+        android:padding="5dp"
+        android:textStyle="normal"
+        android:fontFamily="sans-serif-medium"
+        android:layout_marginTop="10dp"
+        android:textSize="18sp"/>
+
+        <Button
+            android:id="@+id/ok_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ok"
+            android:textColor="@color/black"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:onClick="canceldialog"
+            android:layout_marginBottom="10dp"/>
+
+    </LinearLayout>
+</com.google.android.material.card.MaterialCardView>
